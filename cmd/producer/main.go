@@ -1,8 +1,6 @@
-
 package main
 
 import (
-	"context"
 	"encoding/json"
 	"log"
 	"net/http"
@@ -33,12 +31,6 @@ func plantTree(numberOfTrees int, handler *Handler) {
 
 func main() {
 	log.Println("Producer App Started ...")
-	// Create a new client for Dapr using the SDK
-	client, err := dapr.NewClient()
-	if err != nil {
-		log.Fatalln("Error to create instace of Dapr Client: ", err)
-	}
-	defer client.Close()
 
 	handler := &Handler{EventsProcessed: 1}
 	http.Handle("/plant", handler)
