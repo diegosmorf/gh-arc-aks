@@ -23,6 +23,7 @@ jobs:
     runs-on: 
       group: default
     steps:
+    - uses: elstudio/action-install-azure-cli@v1
     - name: Checkout source code 
       uses: actions/checkout@v3
     - name: 'Az CLI login'
