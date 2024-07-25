@@ -1,6 +1,9 @@
-name: Actions Runner Controller Demo
+name: Actions Runner Controller Demo 1
 on:
   workflow_dispatch:
+  push:
+    branches: 
+      - main
 
 jobs:
   Explore-GitHub-Actions:
